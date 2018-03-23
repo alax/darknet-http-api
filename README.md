@@ -1,4 +1,6 @@
 # darknet-http-api
+*Easy-to-use, language agnostic image object detection.*
+
 ### Motivation
 This project aims to make it easy for anyone to use Darknet and YOLOv2 via a simple HTTP API. Setting up and configuring YOLOv2 isn’t too difficult on it’s own, but once you add OpenCL and CUDA support, things become more tricky. In addition, by exposing an HTTP interface, developers using any language can easily add object detection to their applications. While this image needs to be deployed on a CUDA-enabled host, your application code can run anywhere, potentially simplifying development and deployment.
 
