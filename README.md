@@ -45,7 +45,7 @@ https://github.com/NVIDIA/nvidia-docker
 
 See, not that hard at all. If you’ve done all that, you should now be able to run the following command:
 ```bash
-docker run --runtime=nvidia --rm -p 5000:5000 --name darknet-http-api alaxander/darknet-http-api
+docker run --runtime=nvidia --rm -p 5000:5000 --tmpfs /app/uploads --name darknet-http-api alaxander/darknet-http-api
 ```
 (notice the `—runtime=nvidia` flag)
 
