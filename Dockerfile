@@ -34,4 +34,13 @@ COPY ./app.py /app/
 
 EXPOSE 5000
 
-CMD [ "gunicorn", "-b 0.0.0.0:5000", "-w 4", "app:APP" ]
+# It seems that Darknet leaks quite a bit of memory, so we want to try and limit
+# the effects of that
+CMD [ \
+  "gunicorn", \
+  "--max-requests=5000", \
+  "--max-requests-jitter=10000", \
+  "-b 0.0.0.0:5000", \
+  "-w 4", \
+  "app:APP" \
+]
