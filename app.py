@@ -54,7 +54,7 @@ def detect():
   # Get our time in milliseconds
   detection_time = int(round((detection_time) * 1000))
 
-  APP.logger.info('detection: %sms', detection_time)
+  APP.logger.debug('detection: %sms', detection_time)
 
   matches = []
 
